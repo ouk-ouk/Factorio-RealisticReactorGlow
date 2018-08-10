@@ -1,0 +1,11 @@
+{
+    "name": "RealisticReactorGlow",
+    "version": "1.16.0",
+    "title": "Realistic Reactor Glow",
+    "author": "<NO_NAME>",
+    "contact": "",
+    "homepage": "",
+    "factorio_version": "0.16",
+    "dependencies": ["base >= 0.16"],
+    "description": "The glow of working nuclear reactor has the proper color now!"
+}
