@@ -7,7 +7,7 @@ local nuclearReactorItem = data.raw.item["nuclear-reactor"]
 nuclearReactorItem.icon = getNewTexturePath(nuclearReactorItem.icon)
 
 local nuclearReactorReactor = data.raw.reactor["nuclear-reactor"]
-nuclearReactorReactor.light.color = {b = 0.94, g = 1, r = 0}
+nuclearReactorReactor.light.color = {b = 1, g = 0, r = 0}
 nuclearReactorReactor.working_light_picture.filename = getNewTexturePath(nuclearReactorReactor.working_light_picture.filename)
 nuclearReactorReactor.working_light_picture.hr_version.filename = getNewTexturePath(nuclearReactorReactor.working_light_picture.hr_version.filename)
 
