@@ -9,16 +9,24 @@ local function getNewTexturePath(oldTexturePath)
 end
 
 local nuclearReactorItem = data.raw.item["nuclear-reactor"]
-nuclearReactorItem.icon = getNewTexturePath(nuclearReactorItem.icon)
-
-local nuclearReactorReactor = data.raw.reactor["nuclear-reactor"]
-if settings.startup[cyanSettingName].value then
-	nuclearReactorReactor.light.color = {b = 0.94, g = 1.0, r = 0.0}
-else
-	nuclearReactorReactor.light.color = {b = 1.0, g = 0.15, r = 0.0}
+if nuclearReactorItem then
+	nuclearReactorItem.icon = getNewTexturePath(nuclearReactorItem.icon)
 end
-nuclearReactorReactor.working_light_picture.filename = getNewTexturePath(nuclearReactorReactor.working_light_picture.filename)
-nuclearReactorReactor.working_light_picture.hr_version.filename = getNewTexturePath(nuclearReactorReactor.working_light_picture.hr_version.filename)
+
+local nuclearReactorEntity = data.raw.reactor["nuclear-reactor"]
+if nuclearReactorEntity then
+	if nuclearReactorEntity.light then
+		if settings.startup[cyanSettingName].value then
+			nuclearReactorEntity.light.color = {b = 0.94, g = 1.0, r = 0.0}
+		else
+			nuclearReactorEntity.light.color = {b = 1.0, g = 0.15, r = 0.0}
+		end
+	end
+	nuclearReactorEntity.working_light_picture.filename = getNewTexturePath(nuclearReactorEntity.working_light_picture.filename)
+	nuclearReactorEntity.working_light_picture.hr_version.filename = getNewTexturePath(nuclearReactorEntity.working_light_picture.hr_version.filename)
+end
 
 local nuclearReactorTechnology = data.raw.technology["nuclear-power"]
-nuclearReactorTechnology.icon = getNewTexturePath(nuclearReactorTechnology.icon)
+if nuclearReactorTechnology then
+	nuclearReactorTechnology.icon = getNewTexturePath(nuclearReactorTechnology.icon)
+end
