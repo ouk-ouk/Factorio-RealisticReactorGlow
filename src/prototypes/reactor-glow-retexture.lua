@@ -23,7 +23,6 @@ if nuclearReactorEntity then
 		end
 	end
 	nuclearReactorEntity.working_light_picture.filename = getNewTexturePath(nuclearReactorEntity.working_light_picture.filename)
-	nuclearReactorEntity.working_light_picture.hr_version.filename = getNewTexturePath(nuclearReactorEntity.working_light_picture.hr_version.filename)
 end
 
 local nuclearReactorTechnology = data.raw.technology["nuclear-power"]
